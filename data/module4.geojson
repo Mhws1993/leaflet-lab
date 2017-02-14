@@ -1,0 +1,320 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.922497,
+          43.034993
+        ]
+      },
+      "properties": {
+        "City": "Milwaukee",
+        "Population": 594833,
+        "Ranked_population": 1,
+        "racial_demo_white": 574656,
+        "racial_demo_black": 253764,
+        "racial_demo_asian": 32422,
+        "racial_demo_native_american": 6808,
+        "latitude": 43.034993,
+        "longitude": -87.922497
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.383761,
+          43.074761
+        ]
+      },
+      "properties": {
+        "City": "Madison",
+        "Population": 233209,
+        "Ranked_population": 2,
+        "racial_demo_white": 184030,
+        "racial_demo_black": 16926,
+        "racial_demo_asian": 17211,
+        "racial_demo_native_american": 1001,
+        "latitude": 43.074761,
+        "longitude": -89.383761
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.024832,
+          44.529941
+        ]
+      },
+      "properties": {
+        "City": "Green Bay",
+        "Population": 104057,
+        "Ranked_population": 3,
+        "racial_demo_white": 81075,
+        "racial_demo_black": 3691,
+        "racial_demo_asian": 4210,
+        "racial_demo_native_american": 4210,
+        "latitude": 44.529941,
+        "longitude": -88.024832
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.821226,
+          42.584677
+        ]
+      },
+      "properties": {
+        "City": "Kenosha",
+        "Population": 99218,
+        "Ranked_population": 4,
+        "racial_demo_white": 139416,
+        "racial_demo_black": 11052,
+        "racial_demo_asian": 2393,
+        "racial_demo_native_american": 814,
+        "latitude": 42.584677,
+        "longitude": -87.821226
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.782524,
+          42.726052
+        ]
+      },
+      "properties": {
+        "City": "Racine",
+        "Population": 78860,
+        "Ranked_population": 5,
+        "racial_demo_white": 48712,
+        "racial_demo_black": 17799,
+        "racial_demo_asian": 603,
+        "racial_demo_native_american": 381,
+        "latitude": 42.726052,
+        "longitude": -87.782524
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.40676,
+          44.261134
+        ]
+      },
+      "properties": {
+        "City": "Appleton",
+        "Population": 72623,
+        "Ranked_population": 6,
+        "racial_demo_white": 63553,
+        "racial_demo_black": 1216,
+        "racial_demo_asian": 4279,
+        "racial_demo_native_american": 489,
+        "latitude": 44.261134,
+        "longitude": -88.40676
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.231481,
+          43.011678
+        ]
+      },
+      "properties": {
+        "City": "Waukesha",
+        "Population": 70718,
+        "Ranked_population": 7,
+        "racial_demo_white": 62301,
+        "racial_demo_black": 1660,
+        "racial_demo_asian": 2495,
+        "racial_demo_native_american": 275,
+        "latitude": 43.011678,
+        "longitude": -88.231481
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.540857,
+          44.020692
+        ]
+      },
+      "properties": {
+        "City": "Oshkosh",
+        "Population": 66083,
+        "Ranked_population": 8,
+        "racial_demo_white": 59812,
+        "racial_demo_black": 2051,
+        "racial_demo_asian": 2113,
+        "racial_demo_native_american": 510,
+        "latitude": 44.020692,
+        "longitude": -88.540857
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.498494,
+          44.811349
+        ]
+      },
+      "properties": {
+        "City": "Eau Claire",
+        "Population": 65883,
+        "Ranked_population": 9,
+        "racial_demo_white": 60226,
+        "racial_demo_black": 752,
+        "racial_demo_asian": 3014,
+        "racial_demo_native_american": 347,
+        "latitude": 44.811349,
+        "longitude": -91.498494
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.990774,
+          42.715185
+        ]
+      },
+      "properties": {
+        "City": "Janesville",
+        "Population": 63575,
+        "Ranked_population": 10,
+        "racial_demo_white": 58299,
+        "racial_demo_black": 1633,
+        "racial_demo_asian": 857,
+        "racial_demo_native_american": 187,
+        "latitude": 42.715185,
+        "longitude": -88.990774
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.007031,
+          43.016681
+        ]
+      },
+      "properties": {
+        "City": "West Allis",
+        "Population": 60411,
+        "Ranked_population": 11,
+        "racial_demo_white": 52396,
+        "racial_demo_black": 2199,
+        "racial_demo_asian": 1231,
+        "racial_demo_native_american": 648,
+        "latitude": 43.016681,
+        "longitude": -88.007031
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.254841,
+          43.880437
+        ]
+      },
+      "properties": {
+        "City": "La Crosse",
+        "Population": 51320,
+        "Ranked_population": 12,
+        "racial_demo_white": 46072,
+        "racial_demo_black": 1155,
+        "racial_demo_asian": 2490,
+        "racial_demo_native_american": 286,
+        "latitude": 43.880437,
+        "longitude": -91.254841
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.71453,
+          43.750828
+        ]
+      },
+      "properties": {
+        "City": "Sheboygan",
+        "Population": 49288,
+        "Ranked_population": 13,
+        "racial_demo_white": 40685,
+        "racial_demo_black": 885,
+        "racial_demo_asian": 4439,
+        "racial_demo_native_american": 242,
+        "latitude": 43.750828,
+        "longitude": -87.71453
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.007927,
+          43.049412
+        ]
+      },
+      "properties": {
+        "City": "Wauwatosa",
+        "Population": 46396,
+        "Ranked_population": 14,
+        "racial_demo_white": 41574,
+        "racial_demo_black": 2000,
+        "racial_demo_asian": 1289,
+        "racial_demo_native_american": 139,
+        "latitude": 43.049412,
+        "longitude": -88.007927
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.445803,
+          43.774876
+        ]
+      },
+      "properties": {
+        "City": "Fond du Lac",
+        "Population": 43021,
+        "Ranked_population": 15,
+        "racial_demo_white": 38967,
+        "racial_demo_black": 1096,
+        "racial_demo_asian": 755,
+        "racial_demo_native_american": 293,
+        "latitude": 43.774876,
+        "longitude": -88.445803
+      }
+    }
+  ]
+}
