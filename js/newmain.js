@@ -19,9 +19,9 @@ function createMap(){
 //this function creates the proportional symbols
 function createPropSymbols(data, map){
 		//choose a variable for the proportional symbol
-	var attribute = "1995_pop";
+	  var attribute = "1995_pop";
 
-    //marker options for radius, fillcolor, color, weight, opacity and fillopacity
+    //create marker options
     var geojsonMarkerOptions = {
         radius: 8,
         fillColor: "#ff7800",
@@ -31,6 +31,7 @@ function createPropSymbols(data, map){
         fillOpacity: 0.8
     };
 //Attempting to place calculate radius
+//calculate the radius of each proportional symbol
 	function calcPropRadius(attValue) {
 		//scale factor to adjust symbol size evenly
 		//doubled scale factor as the symbols were too small
@@ -40,7 +41,7 @@ function createPropSymbols(data, map){
 		//radius calculated based on area
 		var radius = Math.sqrt(area/Math.PI);
 		//////////////////////////////////////////////////////////////////////////////why does this console.log help
-	console.log(radius);
+console.log(radius);
     return radius;
 	
 };
@@ -53,7 +54,8 @@ function createPropSymbols(data, map){
             var attValue = Number(feature.properties[attribute]);
 	geojsonMarkerOptions.radius = calcPropRadius(attValue);
             //examine the attribute value to check that it is correct
-       
+            //previous log version
+			//console.log(feature.properties, attValue);
 			//new log statement
 			  console.log(feature.properties, attValue);
             //create circle markers
@@ -64,8 +66,8 @@ function createPropSymbols(data, map){
 
 
 function getData(map){
-    //grabs my lab5_location dataset
-    $.ajax("data/lab5_locations.geojson", {
+    //load the data
+    $.ajax("data/map.geojson", {
         dataType: "json",
         success: function(response){
             //call function to create proportional symbols

@@ -1,0 +1,335 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0059,
+          40.7128
+        ]
+      },
+      "properties": {
+        "City": "New York",
+        "1995_pop": 7.35,
+        "1996_pop": 7.361,
+        "1997_pop": 7.383,
+        "1998_pop": 7.404,
+        "1999_pop": 7.428,
+        "2000_pop": 8.015,
+        "2001_pop": 8.063,
+        "latitude": 40.7128,
+        "longitude": -74.0059
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.243941,
+          34.054394
+        ]
+      },
+      "properties": {
+        "City": "Los Angeles",
+        "1995_pop": 3.53,
+        "1996_pop": 3.542,
+        "1997_pop": 3.565,
+        "1998_pop": 3.598,
+        "1999_pop": 3.634,
+        "2000_pop": 3.704,
+        "2001_pop": 3.738,
+        "latitude": 34.054394,
+        "longitude": -118.243941
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.624421,
+          41.875555
+        ]
+      },
+      "properties": {
+        "City": "Chicago",
+        "1995_pop": 2.8,
+        "1996_pop": 2.814,
+        "1997_pop": 2.808,
+        "1998_pop": 2.803,
+        "1999_pop": 2.799,
+        "2000_pop": 2.896,
+        "2001_pop": 2.895,
+        "latitude": 41.875555,
+        "longitude": -87.624421
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.367697,
+          29.758938
+        ]
+      },
+      "properties": {
+        "City": "Houston",
+        "1995_pop": 1.78,
+        "1996_pop": 1.792,
+        "1997_pop": 1.807,
+        "1998_pop": 1.829,
+        "1999_pop": 1.846,
+        "2000_pop": 1.978,
+        "2001_pop": 1.994,
+        "latitude": 29.758938,
+        "longitude": -95.367697
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.16359,
+          39.952399
+        ]
+      },
+      "properties": {
+        "City": "Philadelphia",
+        "1995_pop": 1.5,
+        "1996_pop": 1.472,
+        "1997_pop": 1.452,
+        "1998_pop": 1.435,
+        "1999_pop": 1.418,
+        "2000_pop": 1.514,
+        "2001_pop": 1.513,
+        "latitude": 39.952399,
+        "longitude": -75.16359
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.075672,
+          33.446768
+        ]
+      },
+      "properties": {
+        "City": "Phoenix",
+        "1995_pop": 1.14,
+        "1996_pop": 1.16,
+        "1997_pop": 1.183,
+        "1998_pop": 1.199,
+        "1999_pop": 1.212,
+        "2000_pop": 1.327,
+        "2001_pop": 1.348,
+        "latitude": 33.446768,
+        "longitude": -112.075672
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.49514,
+          29.4246
+        ]
+      },
+      "properties": {
+        "City": "San Antonio",
+        "1995_pop": 1.09,
+        "1996_pop": 1.1,
+        "1997_pop": 1.119,
+        "1998_pop": 1.133,
+        "1999_pop": 1.147,
+        "2000_pop": 1.164,
+        "2001_pop": 1.177,
+        "latitude": 29.4246,
+        "longitude": -98.49514
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.162771,
+          32.717421
+        ]
+      },
+      "properties": {
+        "City": "San Diego",
+        "1995_pop": 1.17,
+        "1996_pop": 1.178,
+        "1997_pop": 1.197,
+        "1998_pop": 1.213,
+        "1999_pop": 1.239,
+        "2000_pop": 1.227,
+        "2001_pop": 1.236,
+        "latitude": 32.717421,
+        "longitude": -117.162771
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.796856,
+          32.776272
+        ]
+      },
+      "properties": {
+        "City": "Dallas",
+        "1995_pop": 1.04,
+        "1996_pop": 1.047,
+        "1997_pop": 1.059,
+        "1998_pop": 1.072,
+        "1999_pop": 1.076,
+        "2000_pop": 1.191,
+        "2001_pop": 1.2,
+        "latitude": 32.776272,
+        "longitude": -96.796856
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.890583,
+          37.336191
+        ]
+      },
+      "properties": {
+        "City": "San Jose",
+        "1995_pop": 0.82,
+        "1996_pop": 0.836,
+        "1997_pop": 0.852,
+        "1998_pop": 0.863,
+        "1999_pop": 0.868,
+        "2000_pop": 0.904,
+        "2001_pop": 0.909,
+        "latitude": 37.336191,
+        "longitude": -121.890583
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.743699,
+          30.271129
+        ]
+      },
+      "properties": {
+        "City": "Austin",
+        "1995_pop": 0.56,
+        "1996_pop": 0.563,
+        "1997_pop": 0.567,
+        "1998_pop": 0.577,
+        "1999_pop": 0.588,
+        "2000_pop": 0.672,
+        "2001_pop": 0.686,
+        "latitude": 30.271129,
+        "longitude": -97.743699
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41927,
+          37.779277
+        ]
+      },
+      "properties": {
+        "City": "San Francisco",
+        "1995_pop": 0.75,
+        "1996_pop": 0.754,
+        "1997_pop": 0.763,
+        "1998_pop": 0.77,
+        "1999_pop": 0.775,
+        "2000_pop": 0.777,
+        "2001_pop": 0.785,
+        "latitude": 37.779277,
+        "longitude": -122.41927
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.000706,
+          39.96226
+        ]
+      },
+      "properties": {
+        "City": "Columbus",
+        "1995_pop": 0.66,
+        "1996_pop": 0.663,
+        "1997_pop": 0.669,
+        "1998_pop": 0.67,
+        "1999_pop": 0.671,
+        "2000_pop": 0.716,
+        "2001_pop": 0.724,
+        "latitude": 39.96226,
+        "longitude": -83.000706
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.332746,
+          32.753177
+        ]
+      },
+      "properties": {
+        "City": "Fort Worth",
+        "1995_pop": 0.47,
+        "1996_pop": 0.477,
+        "1997_pop": 0.485,
+        "1998_pop": 0.493,
+        "1999_pop": 0.502,
+        "2000_pop": 0.546,
+        "2001_pop": 0.557,
+        "latitude": 32.753177,
+        "longitude": -97.332746
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.843127,
+          35.227087
+        ]
+      },
+      "properties": {
+        "City": "Charlotte",
+        "1995_pop": 0.473,
+        "1996_pop": 0.485,
+        "1997_pop": 0.497,
+        "1998_pop": 0.508,
+        "1999_pop": 0.521,
+        "2000_pop": 0.57,
+        "2001_pop": 0.582,
+        "latitude": 35.227087,
+        "longitude": -80.843127
+      }
+    }
+  ]
+}

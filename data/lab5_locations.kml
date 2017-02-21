@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="lab5_locations" id="lab5_locations">
+	<SimpleField name="City" type="string"></SimpleField>
+	<SimpleField name="1995_pop" type="float"></SimpleField>
+	<SimpleField name="1996_pop" type="float"></SimpleField>
+	<SimpleField name="1997_pop" type="float"></SimpleField>
+	<SimpleField name="1998_pop" type="float"></SimpleField>
+	<SimpleField name="1999_pop" type="float"></SimpleField>
+	<SimpleField name="2000_pop" type="float"></SimpleField>
+	<SimpleField name="2001_pop" type="float"></SimpleField>
+	<SimpleField name="latitude" type="float"></SimpleField>
+	<SimpleField name="longitude" type="float"></SimpleField>
+</Schema>
+<Folder><name>lab5_locations</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">New York</SimpleData>
+		<SimpleData name="1995_pop">7.35</SimpleData>
+		<SimpleData name="1996_pop">7.361</SimpleData>
+		<SimpleData name="1997_pop">7.383</SimpleData>
+		<SimpleData name="1998_pop">7.404</SimpleData>
+		<SimpleData name="1999_pop">7.428</SimpleData>
+		<SimpleData name="2000_pop">8.015</SimpleData>
+		<SimpleData name="2001_pop">8.063</SimpleData>
+		<SimpleData name="latitude">40.7128</SimpleData>
+		<SimpleData name="longitude">-74.0059</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-74.0059,40.7128</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">Los Angeles</SimpleData>
+		<SimpleData name="1995_pop">3.53</SimpleData>
+		<SimpleData name="1996_pop">3.542</SimpleData>
+		<SimpleData name="1997_pop">3.565</SimpleData>
+		<SimpleData name="1998_pop">3.598</SimpleData>
+		<SimpleData name="1999_pop">3.634</SimpleData>
+		<SimpleData name="2000_pop">3.704</SimpleData>
+		<SimpleData name="2001_pop">3.738</SimpleData>
+		<SimpleData name="latitude">34.054394</SimpleData>
+		<SimpleData name="longitude">-118.243941</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-118.243941,34.054394</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">Chicago</SimpleData>
+		<SimpleData name="1995_pop">2.8</SimpleData>
+		<SimpleData name="1996_pop">2.814</SimpleData>
+		<SimpleData name="1997_pop">2.808</SimpleData>
+		<SimpleData name="1998_pop">2.803</SimpleData>
+		<SimpleData name="1999_pop">2.799</SimpleData>
+		<SimpleData name="2000_pop">2.896</SimpleData>
+		<SimpleData name="2001_pop">2.895</SimpleData>
+		<SimpleData name="latitude">41.875555</SimpleData>
+		<SimpleData name="longitude">-87.624421</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.624421,41.875555</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">Houston</SimpleData>
+		<SimpleData name="1995_pop">1.78</SimpleData>
+		<SimpleData name="1996_pop">1.792</SimpleData>
+		<SimpleData name="1997_pop">1.807</SimpleData>
+		<SimpleData name="1998_pop">1.829</SimpleData>
+		<SimpleData name="1999_pop">1.846</SimpleData>
+		<SimpleData name="2000_pop">1.978</SimpleData>
+		<SimpleData name="2001_pop">1.994</SimpleData>
+		<SimpleData name="latitude">29.758938</SimpleData>
+		<SimpleData name="longitude">-95.367697</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-95.367697,29.758938</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">Philadelphia</SimpleData>
+		<SimpleData name="1995_pop">1.5</SimpleData>
+		<SimpleData name="1996_pop">1.472</SimpleData>
+		<SimpleData name="1997_pop">1.452</SimpleData>
+		<SimpleData name="1998_pop">1.435</SimpleData>
+		<SimpleData name="1999_pop">1.418</SimpleData>
+		<SimpleData name="2000_pop">1.514</SimpleData>
+		<SimpleData name="2001_pop">1.513</SimpleData>
+		<SimpleData name="latitude">39.952399</SimpleData>
+		<SimpleData name="longitude">-75.16359</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-75.16359,39.952399</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">Phoenix</SimpleData>
+		<SimpleData name="1995_pop">1.14</SimpleData>
+		<SimpleData name="1996_pop">1.16</SimpleData>
+		<SimpleData name="1997_pop">1.183</SimpleData>
+		<SimpleData name="1998_pop">1.199</SimpleData>
+		<SimpleData name="1999_pop">1.212</SimpleData>
+		<SimpleData name="2000_pop">1.327</SimpleData>
+		<SimpleData name="2001_pop">1.348</SimpleData>
+		<SimpleData name="latitude">33.446768</SimpleData>
+		<SimpleData name="longitude">-112.075672</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.075672,33.446768</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">San Antonio</SimpleData>
+		<SimpleData name="1995_pop">1.09</SimpleData>
+		<SimpleData name="1996_pop">1.1</SimpleData>
+		<SimpleData name="1997_pop">1.119</SimpleData>
+		<SimpleData name="1998_pop">1.133</SimpleData>
+		<SimpleData name="1999_pop">1.147</SimpleData>
+		<SimpleData name="2000_pop">1.164</SimpleData>
+		<SimpleData name="2001_pop">1.177</SimpleData>
+		<SimpleData name="latitude">29.4246</SimpleData>
+		<SimpleData name="longitude">-98.49514</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-98.49514,29.4246</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">San Diego</SimpleData>
+		<SimpleData name="1995_pop">1.17</SimpleData>
+		<SimpleData name="1996_pop">1.178</SimpleData>
+		<SimpleData name="1997_pop">1.197</SimpleData>
+		<SimpleData name="1998_pop">1.213</SimpleData>
+		<SimpleData name="1999_pop">1.239</SimpleData>
+		<SimpleData name="2000_pop">1.227</SimpleData>
+		<SimpleData name="2001_pop">1.236</SimpleData>
+		<SimpleData name="latitude">32.717421</SimpleData>
+		<SimpleData name="longitude">-117.162771</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-117.162771,32.717421</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">Dallas</SimpleData>
+		<SimpleData name="1995_pop">1.04</SimpleData>
+		<SimpleData name="1996_pop">1.047</SimpleData>
+		<SimpleData name="1997_pop">1.059</SimpleData>
+		<SimpleData name="1998_pop">1.072</SimpleData>
+		<SimpleData name="1999_pop">1.076</SimpleData>
+		<SimpleData name="2000_pop">1.191</SimpleData>
+		<SimpleData name="2001_pop">1.2</SimpleData>
+		<SimpleData name="latitude">32.776272</SimpleData>
+		<SimpleData name="longitude">-96.796856</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-96.796856,32.776272</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">San Jose</SimpleData>
+		<SimpleData name="1995_pop">0.82</SimpleData>
+		<SimpleData name="1996_pop">0.836</SimpleData>
+		<SimpleData name="1997_pop">0.852</SimpleData>
+		<SimpleData name="1998_pop">0.863</SimpleData>
+		<SimpleData name="1999_pop">0.868</SimpleData>
+		<SimpleData name="2000_pop">0.904</SimpleData>
+		<SimpleData name="2001_pop">0.909</SimpleData>
+		<SimpleData name="latitude">37.336191</SimpleData>
+		<SimpleData name="longitude">-121.890583</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-121.890583,37.336191</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">Austin</SimpleData>
+		<SimpleData name="1995_pop">0.56</SimpleData>
+		<SimpleData name="1996_pop">0.563</SimpleData>
+		<SimpleData name="1997_pop">0.567</SimpleData>
+		<SimpleData name="1998_pop">0.577</SimpleData>
+		<SimpleData name="1999_pop">0.588</SimpleData>
+		<SimpleData name="2000_pop">0.672</SimpleData>
+		<SimpleData name="2001_pop">0.686</SimpleData>
+		<SimpleData name="latitude">30.271129</SimpleData>
+		<SimpleData name="longitude">-97.743699</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-97.743699,30.271129</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">San Francisco</SimpleData>
+		<SimpleData name="1995_pop">0.75</SimpleData>
+		<SimpleData name="1996_pop">0.754</SimpleData>
+		<SimpleData name="1997_pop">0.763</SimpleData>
+		<SimpleData name="1998_pop">0.77</SimpleData>
+		<SimpleData name="1999_pop">0.775</SimpleData>
+		<SimpleData name="2000_pop">0.777</SimpleData>
+		<SimpleData name="2001_pop">0.785</SimpleData>
+		<SimpleData name="latitude">37.779277</SimpleData>
+		<SimpleData name="longitude">-122.41927</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-122.41927,37.779277</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">Columbus</SimpleData>
+		<SimpleData name="1995_pop">0.66</SimpleData>
+		<SimpleData name="1996_pop">0.663</SimpleData>
+		<SimpleData name="1997_pop">0.669</SimpleData>
+		<SimpleData name="1998_pop">0.67</SimpleData>
+		<SimpleData name="1999_pop">0.671</SimpleData>
+		<SimpleData name="2000_pop">0.716</SimpleData>
+		<SimpleData name="2001_pop">0.724</SimpleData>
+		<SimpleData name="latitude">39.96226</SimpleData>
+		<SimpleData name="longitude">-83.000706</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-83.000706,39.96226</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">Fort Worth</SimpleData>
+		<SimpleData name="1995_pop">0.47</SimpleData>
+		<SimpleData name="1996_pop">0.477</SimpleData>
+		<SimpleData name="1997_pop">0.485</SimpleData>
+		<SimpleData name="1998_pop">0.493</SimpleData>
+		<SimpleData name="1999_pop">0.502</SimpleData>
+		<SimpleData name="2000_pop">0.546</SimpleData>
+		<SimpleData name="2001_pop">0.557</SimpleData>
+		<SimpleData name="latitude">32.753177</SimpleData>
+		<SimpleData name="longitude">-97.332746</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-97.332746,32.753177</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#lab5_locations">
+		<SimpleData name="City">Charlotte</SimpleData>
+		<SimpleData name="1995_pop">0.473</SimpleData>
+		<SimpleData name="1996_pop">0.485</SimpleData>
+		<SimpleData name="1997_pop">0.497</SimpleData>
+		<SimpleData name="1998_pop">0.508</SimpleData>
+		<SimpleData name="1999_pop">0.521</SimpleData>
+		<SimpleData name="2000_pop">0.57</SimpleData>
+		<SimpleData name="2001_pop">0.582</SimpleData>
+		<SimpleData name="latitude">35.227087</SimpleData>
+		<SimpleData name="longitude">-80.843127</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-80.843127,35.227087</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
