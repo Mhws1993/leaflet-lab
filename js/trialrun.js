@@ -79,7 +79,7 @@ function createPropSymbols(data, map, attributes){
     }).addTo(map);
 };
 
-function createSequenceControls(map, attributes){
+function createSequenceControls(map, latlng, attributes){
 	
     //create range input element (slider)
     $('#panel').append('<input class="range-slider" type="range">');
@@ -93,6 +93,8 @@ function createSequenceControls(map, attributes){
 	$('#panel').append('<button class="skip" id="reverse">Reverse</button>');
     $('#panel').append('<button class="skip" id="forward">Skip</button>');
 	
+	//test button
+	$('#panel').append('<button class="skip" id="above" title="above">above</button>');
 	
 	  //Below Example 3.6 in createSequenceControls()
     //Step 5: click listener for buttons
@@ -114,18 +116,18 @@ function createSequenceControls(map, attributes){
         //Step 8: update slider
 		
         $('.range-slider').val(index);
-		updatePropSymbols(map, attributes[index]);
+		updatePropSymbols(map, latlng, attributes[index]);
 		
     });
 	  $('.range-slider').on('input', function(){
         //Step 6: get the new index value
         var index = $(this).val();
-		updatePropSymbols(map, attributes[index]);
+		updatePropSymbols(map, latlng, attributes[index]);
     });
 	
 	
 };
-function updatePropSymbols(map, attribute){
+function updatePropSymbols(map, latlng, attribute){
     map.eachLayer(function(layer){
         if (layer.feature && layer.feature.properties[attribute]){
             //update the layer style and popup
@@ -150,6 +152,60 @@ function updatePropSymbols(map, attribute){
             });
         };
     });
+	//work with filter here?
+	
+	
+	
+/*********************************************************************************
+**********************************************************************************
+**********************************************************************************
+**********************************************************************************
+****************Start here********************************************************
+**********************************************************************************
+**********************************************************************************
+**********************************************************************************
+*********************************************************************************/
+/*	var tempAttempt = layer.feature.properties;
+	$('.skip').click(function(){
+		
+		if ($(this).attr('id') == 'above'){
+			console.log("why cats?");
+			if (tempAttempt[attribute] < 5){
+				console.log("not dogs?");
+			};
+		};
+		
+		
+		
+		
+		
+	});*/
+	
+	
+	if ($('.skip').click(function(){
+		 if ($(this).attr('id') == 'above'){
+		console.log("blue?");
+	 return L.circleMarker(latlng, {
+        radius: 5.0,
+        fillColor: '#e1118e',
+        color: 'blue',
+        weight: 1,
+        opacity: 1.0,
+        fillOpacity: 1.0
+		
+        });
+		 };//this is for new if statement	
+	}));
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 };
 //});
 //Step 3 lab 5: build an attributes array from the data
@@ -185,7 +241,7 @@ function getData(map){
             //call function to create proportional symbols
             createPropSymbols(response, map, attributes);
 			//this should create the sequence controls
-			createSequenceControls(map, attributes);
+			createSequenceControls(map, latlng, attributes);
         }
     });
 };
