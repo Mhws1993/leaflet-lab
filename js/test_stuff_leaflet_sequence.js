@@ -125,11 +125,36 @@ function addEvents(){
 
 
 
+var obj = $.parseJSON('{"city": "", ""1995_pop": "", ""1996_pop": ""1997_pop", ""1998_pop": ""1999_pop"}');
+alert(obj['jobtitel']);
 
 
+    var attValue = Number(feature.properties[attribute]);  
+    options.radius = calcPropRadius(attValue);
+    var layer = L.circleMarker(latlng, options);
 
-
-
+	create boolean variables above each filter button (the $('above')) etc, so if it is true then run
+	if false then don't
+	
+	
+	if (props[attribute] > max || props[attribute] < min ){
+				 //layer.setRadius(0);
+					//fillColor: '#ff0000'
+				
+					 console.log("does props[attribute] still work in min/max?");
+					 
+					 layer.setRadius(0);
+					// return { fillColor: "blue"}				
+				
+			};
+			//uses copied original radius to reset values of the marker radius
+		if (props[attribute] < max && props[attribute] > min ){
+				 //layer.setRadius(0);
+					//fillColor: '#ff0000'
+				
+					 console.log("min/max?");
+					 
+					 layer.setRadius(savedRadius);
 
 
 

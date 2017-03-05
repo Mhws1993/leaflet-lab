@@ -92,20 +92,10 @@ function createSequenceControls(map, attributes){
 	////////////////////Change this to another button type  $('#reverse').html('<img src="img/reverse.png">'); where in example
 	$('#panel').append('<button class="skip" id="reverse">Reverse</button>');
     $('#panel').append('<button class="skip" id="forward">Skip</button>');
-	$('#panel').append('<button id="above" title="above">above</button>');
+	
 	
 	  //Below Example 3.6 in createSequenceControls()
     //Step 5: click listener for buttons
-	/******************************************************************
-	this is to call filter function
-	******************************************************************/
-	$('#above').click(function(){
-		 var index = $('.range-slider').val();
-		filter (map, attributes[index], min, max);
-		//updatePropSymbols(map, attributes[index]);
-	});
-	
-	
 	$('.skip').click(function(){
         //get the old index value
         var index = $('.range-slider').val();
@@ -160,31 +150,6 @@ function updatePropSymbols(map, attribute){
             });
         };
     });
-};
-function filter (map, attribute, min, max){
-	var max = 1.5;
-	var min = 1;
-	  map.eachLayer(function(layer){
-        if (layer.feature && layer.feature.properties[attribute]){
-            //update the layer style and popup
-			//access feature properties
-            var props = layer.feature.properties;
-
-            //update each feature's radius based on new attribute values
-            var radius = calcPropRadius(props[attribute]);
-			//in the case the condition isn't met
-		if (props[attribute] > max || props[attribute] < min ){
-				 layer.setRadius(0);
-				
-				
-				
-			};
-           
-
-     
-        };
-    });
-	
 };
 //});
 //Step 3 lab 5: build an attributes array from the data

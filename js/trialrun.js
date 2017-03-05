@@ -75,11 +75,12 @@ function createPropSymbols(data, map, attributes){
     L.geoJson(data, {
         pointToLayer: function(feature, latlng){
             return pointToLayer(feature, latlng, attributes);
+			
         }
     }).addTo(map);
 };
 
-function createSequenceControls(map, latlng, attributes){
+function createSequenceControls(map, attributes){
 	
     //create range input element (slider)
     $('#panel').append('<input class="range-slider" type="range">');
@@ -92,9 +93,8 @@ function createSequenceControls(map, latlng, attributes){
 	////////////////////Change this to another button type  $('#reverse').html('<img src="img/reverse.png">'); where in example
 	$('#panel').append('<button class="skip" id="reverse">Reverse</button>');
     $('#panel').append('<button class="skip" id="forward">Skip</button>');
-	
-	//test button
-	$('#panel').append('<button class="skip" id="above" title="above">above</button>');
+		$('#panel').append('<button class="skip" id="above" title="above">above</button>');
+
 	
 	  //Below Example 3.6 in createSequenceControls()
     //Step 5: click listener for buttons
@@ -116,18 +116,38 @@ function createSequenceControls(map, latlng, attributes){
         //Step 8: update slider
 		
         $('.range-slider').val(index);
-		updatePropSymbols(map, latlng, attributes[index]);
+		updatePropSymbols(map, attributes[index]);
 		
     });
 	  $('.range-slider').on('input', function(){
         //Step 6: get the new index value
         var index = $(this).val();
-		updatePropSymbols(map, latlng, attributes[index]);
+		updatePropSymbols(map, attributes[index]);
     });
 	
 	
 };
-function updatePropSymbols(map, latlng, attribute){
+
+
+function filter(map, latlng, attribute) {
+	if (feature.properties[attribute] < 1){
+    //return true;
+	show_on_map = true;
+	
+	return feature.properties.show_on_map;
+} else {
+    return false;
+}
+	
+	
+	L.geoJson(someFeatures, {
+    filter: function(feature, layer) {
+        return feature.properties.show_on_map;
+    }
+}).addTo(map);
+	
+};
+function updatePropSymbols(map, attribute){
     map.eachLayer(function(layer){
         if (layer.feature && layer.feature.properties[attribute]){
             //update the layer style and popup
@@ -152,60 +172,6 @@ function updatePropSymbols(map, latlng, attribute){
             });
         };
     });
-	//work with filter here?
-	
-	
-	
-/*********************************************************************************
-**********************************************************************************
-**********************************************************************************
-**********************************************************************************
-****************Start here********************************************************
-**********************************************************************************
-**********************************************************************************
-**********************************************************************************
-*********************************************************************************/
-/*	var tempAttempt = layer.feature.properties;
-	$('.skip').click(function(){
-		
-		if ($(this).attr('id') == 'above'){
-			console.log("why cats?");
-			if (tempAttempt[attribute] < 5){
-				console.log("not dogs?");
-			};
-		};
-		
-		
-		
-		
-		
-	});*/
-	
-	
-	if ($('.skip').click(function(){
-		 if ($(this).attr('id') == 'above'){
-		console.log("blue?");
-	 return L.circleMarker(latlng, {
-        radius: 5.0,
-        fillColor: '#e1118e',
-        color: 'blue',
-        weight: 1,
-        opacity: 1.0,
-        fillOpacity: 1.0
-		
-        });
-		 };//this is for new if statement	
-	}));
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 };
 //});
 //Step 3 lab 5: build an attributes array from the data
@@ -241,7 +207,7 @@ function getData(map){
             //call function to create proportional symbols
             createPropSymbols(response, map, attributes);
 			//this should create the sequence controls
-			createSequenceControls(map, latlng, attributes);
+			createSequenceControls(map, attributes);
         }
     });
 };
