@@ -1,11 +1,16 @@
 /* Map of test data from test */
 //proportional symbol isn't working. Could the order of the new code be the reason?
 //function to instantiate the Leaflet map
+var min;
+var max;
+var attribute;
+
 function createMap(){
     //create the map
     var map = L.map('mapid', {
-        center: [20, 0],
-        zoom: 2
+       // center: [20, 0],
+	   center: [39.475802, -96.120551],
+        zoom: 4
     });
 
     //add OSM base tilelayer
@@ -19,7 +24,7 @@ function createMap(){
 	function calcPropRadius(attValue) {
 		//scale factor to adjust symbol size evenly
 		//doubled scale factor as the symbols were too small
-		var scaleFactor = 150;
+		var scaleFactor = 500;
 		//area based on attribute value and scale factor
 		var area = attValue * scaleFactor;
 		//radius calculated based on area
@@ -79,9 +84,9 @@ function createPropSymbols(data, map, attributes){
     }).addTo(map);
 };
 
-function createSequenceControls(map, latlng, attributes){
-	
+function createSequenceControls(map, attributes, min, max){
     //create range input element (slider)
+
     $('#panel').append('<input class="range-slider" type="range">');
 	$('.range-slider').attr({
         max: 6,
@@ -92,11 +97,121 @@ function createSequenceControls(map, latlng, attributes){
 	////////////////////Change this to another button type  $('#reverse').html('<img src="img/reverse.png">'); where in example
 	$('#panel').append('<button class="skip" id="reverse">Reverse</button>');
     $('#panel').append('<button class="skip" id="forward">Skip</button>');
+	$('#panel').append('<button id="between" title="between">Show Between 1 & 5 Million</button>');
+	$('#panel').append('<button id="five" title="Over Five Million">Show Over Five Million</button>');
+	$('#panel').append('<button id="one" title="Under One Million">Show Under 1 Million</button>');
+	console.log("right before #between");
 	
-	//test button
-	$('#panel').append('<button class="skip" id="above" title="above">above</button>');
+	//Filter Buttons
+	var betweenSwitch = false;
+	$('#between').click(function(){
+		console.log("outside true/false");
+		if (betweenSwitch == false){
+			console.log("false");
+			var max = 5;
+			var min = 1;
+			console.log("inside of #between");
+			
+			var index = $('.range-slider').val();
+			filter (map, attributes[index], min, max);
+			//x = document.GetElementById("between");
+			// x.style.color = 'blue';
+			$(this).css('color', 'white');
+			
+			//This will set the other two buttons back to their original colors
+			$('#five').css('color', 'black');
+			$('#one').css('color', 'black');
+			betweenSwitch = true;
+			fiveSwitch = false;
+			oneSwitch = false;
+			console.log('now true');
+		} else if (betweenSwitch == true){
+			var max = 300;
+			var min = -300;
+			$(this).css('color', 'black');
+			/*have to make each xSwitch = false in each other button to
+			reset them*/
+			betweenSwitch = false;
+			console.log('now false');
+			$('#five').css('color', 'black');
+			$('#one').css('color', 'black');
+			var index = $('.range-slider').val();
+			filter (map, attributes[index], min, max);
+		};
 	
-	  //Below Example 3.6 in createSequenceControls()
+
+		
+			
+	});
+	//Filter button Five
+	var fiveSwitch = false;
+	$('#five').click(function(){
+		if (fiveSwitch == false){
+			console.log("inside of #five");
+			console.log("fiveSwitch false");
+			var max = Infinity;
+			var min = 5;
+			var index = $('.range-slider').val();
+			filter (map, attributes[index], min, max);
+			//x = document.GetElementById("between");
+			// x.style.color = 'blue';
+			$(this).css('color', 'white');
+			//This will set the other two buttons back to their original colors
+			$('#between').css('color', 'black');
+			$('#one').css('color', 'black');
+			betweenSwitch = false;
+			oneSwitch = false;
+			fiveSwitch = true;
+
+		} else if (fiveSwitch == true){
+			var max = 300;
+			var min = -300;
+			$(this).css('color', 'black');
+			/*have to make each xSwitch = false in each other button to
+			reset them*/
+			fiveSwitch = false;
+			console.log('now false');
+			$('#between').css('color', 'black');
+			$('#one').css('color', 'black');
+			var index = $('.range-slider').val();
+			filter (map, attributes[index], min, max);
+		};
+	});
+	var oneSwitch = false;	
+	$('#one').click(function(){
+		if (oneSwitch == false){
+			console.log("inside of #one");	
+			var max = 1;
+			var min = -Infinity;
+			var index = $('.range-slider').val();
+			filter (map, attributes[index], min, max);
+			//x = document.GetElementById("between");
+			// x.style.color = 'blue';
+			$(this).css('color', 'white');
+			//This will set the other two buttons back to their original colors
+			$('#between').css('color', 'black');
+			$('#five').css('color', 'black');
+			betweenSwitch = false;
+			fiveSwitch = false;
+			oneSwitch = true;
+		} else if (oneSwitch == true){
+			var max = 300;
+			var min = -300;
+			$(this).css('color', 'black');
+			/*have to make each xSwitch = false in each other button to
+			reset them*/
+			oneSwitch = false;
+			console.log('now false');
+			$('#between').css('color', 'black');
+			$('#five').css('color', 'black');
+			var index = $('.range-slider').val();
+			filter (map, attributes[index], min, max);
+				
+			
+		};
+	});
+	  
+	  
     //Step 5: click listener for buttons
 	$('.skip').click(function(){
         //get the old index value
@@ -105,29 +220,42 @@ function createSequenceControls(map, latlng, attributes){
         //Step 6: increment or decrement depending on button clicked
         if ($(this).attr('id') == 'forward'){
             index++;
+			//reset text color if forward
+			$('#between').css('color', 'black');
+			$('#one').css('color', 'black');
+			$('#five').css('color', 'black');
             //Step 7: if past the last attribute, wrap around to first attribute
             index = index > 6 ? 0 : index;
         } else if ($(this).attr('id') == 'reverse'){
             index--;
+			//reset text color if reverse
+			$('#between').css('color', 'black');
+			$('#one').css('color', 'black');
+			$('#five').css('color', 'black');
             //Step 7: if past the first attribute, wrap around to last attribute
             index = index < 0 ? 6 : index;
+			
         };
 
         //Step 8: update slider
 		
         $('.range-slider').val(index);
-		updatePropSymbols(map, latlng, attributes[index]);
+		updatePropSymbols(map, attributes[index]);
 		
     });
 	  $('.range-slider').on('input', function(){
         //Step 6: get the new index value
         var index = $(this).val();
-		updatePropSymbols(map, latlng, attributes[index]);
+		//reset text color if using slider.
+		$('#between').css('color', 'black');
+			$('#one').css('color', 'black');
+			$('#five').css('color', 'black');
+		updatePropSymbols(map, attributes[index]);
     });
 	
 	
 };
-function updatePropSymbols(map, latlng, attribute){
+function updatePropSymbols(map, attribute){
     map.eachLayer(function(layer){
         if (layer.feature && layer.feature.properties[attribute]){
             //update the layer style and popup
@@ -152,62 +280,60 @@ function updatePropSymbols(map, latlng, attribute){
             });
         };
     });
-	//work with filter here?
-	
-	
-	
-/*********************************************************************************
-**********************************************************************************
-**********************************************************************************
-**********************************************************************************
-****************Start here********************************************************
-**********************************************************************************
-**********************************************************************************
-**********************************************************************************
-*********************************************************************************/
-/*	var tempAttempt = layer.feature.properties;
-	$('.skip').click(function(){
-		
-		if ($(this).attr('id') == 'above'){
-			console.log("why cats?");
-			if (tempAttempt[attribute] < 5){
-				console.log("not dogs?");
-			};
-		};
-		
-		
-		
-		
-		
-	});*/
-	
-	
-	if ($('.skip').click(function(){
-		 if ($(this).attr('id') == 'above'){
-		console.log("blue?");
-	 return L.circleMarker(latlng, {
-        radius: 5.0,
-        fillColor: '#e1118e',
-        color: 'blue',
-        weight: 1,
-        opacity: 1.0,
-        fillOpacity: 1.0
-		
-        });
-		 };//this is for new if statement	
-	}));
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 };
 //});
+
+function filter (map, attribute, min, max, attValue){
+	//var max = 1.5;
+	//var min = 1;
+	//Save a second radius to reset symbols that were set to zero
+	
+	  map.eachLayer(function(layer){
+        if (layer.feature && layer.feature.properties[attribute]){
+            //update the layer style and popup
+			//access feature properties
+			
+            var props = layer.feature.properties;
+
+            //update each feature's radius based on new attribute values
+            var radius = calcPropRadius(props[attribute]);
+			var savedRadius = radius;
+			//in the case the condition isn't met
+		if (props[attribute] > max || props[attribute] < min ){
+				 //layer.setRadius(0);
+					//fillColor: '#ff0000'
+				
+					 console.log("does props[attribute] still work in min/max?");
+					 
+					 layer.setRadius(null);
+					// return { fillColor: "blue"}				
+				
+			};
+			//uses copied original radius to reset values of the marker radius
+		if (props[attribute] < max && props[attribute] > min ){
+				 //layer.setRadius(0);
+					//fillColor: '#ff0000'
+				
+					 console.log("min/max?");
+					 
+					 layer.setRadius(savedRadius);
+					// return { fillColor: "blue"};
+				 
+				 /////////////////////////////////////////////maybe?
+				//updatePropSymbols(map, attribute);
+				
+				
+			};
+		
+
+     
+        };
+    });
+	
+};
+
+
+
 //Step 3 lab 5: build an attributes array from the data
 ////////////////////PUT  PROCESS DATA BACK HERE IF THIS DOESN'T WORK
 function processData(data){
@@ -241,7 +367,7 @@ function getData(map){
             //call function to create proportional symbols
             createPropSymbols(response, map, attributes);
 			//this should create the sequence controls
-			createSequenceControls(map, latlng, attributes);
+			createSequenceControls(map, attributes, min, max);
         }
     });
 };
