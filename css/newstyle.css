@@ -1,0 +1,83 @@
+/*Stylesheet by Matthew Smith*/
+
+#mapid {
+    height: 800px;
+    /*width: 80%;*/
+	width:100%;
+    display: inline-block;
+}
+
+#forward {
+   
+}
+
+#reverse {
+   
+}
+#between {
+	
+}
+#five {
+	
+}
+#one {
+
+}
+#hidden{
+    height:20px;
+	position:relative; 
+	margin: -20px -50px; 
+	width:100px; 
+	top:50%; 
+	left:50%;
+}
+#hiddenTitle{
+	    height:100px;
+	
+	
+	width:30px; 
+	float: right;
+	
+	
+}
+.range-slider {
+    width: 200px;
+	
+}
+
+.sequence-control-container {
+    width: 390px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    line-height: 45px;
+    text-align: center;
+    border: solid gray 1px;
+	float: bottom;
+	
+}
+
+.legend-control-container {
+   
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    line-height: 45px;
+    text-align: center;
+    border: solid gray 1px;
+	float: bottom;
+	
+}
+.title-control-container {
+	line-height: 50px;
+	white-space: pre-wrap;
+	font-size:30px;
+    width: 400px;
+    height: 100px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    line-height: 25px;
+    text-align: center;
+    border: solid gray 1px;
+	top:50%; 
+}
+
