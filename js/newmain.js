@@ -5,7 +5,7 @@ var attribute;
 var betweenSwitch = false;
 var fiveSwitch = false;
 var oneSwitch = false;
-
+ 
 function createMap() {
     //create the map
     var map = L.map('mapid', {
